@@ -1,22 +1,64 @@
-# Welcome to your Lovable project
+# PayPlanWizard
 
-## Project info
+A modern web application built with React, TypeScript, Vite, and Shadcn UI components.
 
-**URL**: https://lovable.dev/projects/54c78d89-63b8-4884-a2cd-407cfc47ec9c
+## Getting Started
 
-## How can I edit this code?
+### Prerequisites
 
-There are several ways of editing your application.
+- Node.js (v16 or later)
+- npm or yarn or pnpm or bun
 
-**Use Lovable**
+### Installation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/54c78d89-63b8-4884-a2cd-407cfc47ec9c) and start prompting.
+1. Clone the repository
+```bash
+git clone https://github.com/sadick3660/PayPlanWizard.git
+cd PayPlanWizard
+```
 
-Changes made via Lovable will be committed automatically to this repo.
+2. Install dependencies
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
+# or
+bun install
+```
 
-**Use your preferred IDE**
+3. Start the development server
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun run dev
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Deployment
+
+This project is deployed to GitHub Pages. To deploy changes:
+
+```bash
+# Build the project
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+## Technologies Used
+
+- React
+- TypeScript
+- Vite
+- Shadcn UI
+- Tailwind CSS
+- Radix UI
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 

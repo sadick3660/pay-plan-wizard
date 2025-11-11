@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
-import { Download, Printer, ExternalLink, Moon, Sun, Languages } from "lucide-react";
+import { Download, Printer, BookOpen, Moon, Sun, Languages } from "lucide-react";
 import jsPDF from "jspdf";
 import { useToast } from "@/hooks/use-toast";
 import iaasoLogo from "@/assets/iaaso-logo.png";
@@ -26,7 +27,7 @@ const translations = {
     beforeSem2: "Before Second Semester",
     downloadPDF: "Download PDF",
     print: "Print",
-    otherSystems: "INSTITUTE STUDENT MANAGEMENT SYSTEM(ISMS)",
+    otherSystems: "View Other Academic Programs",
     createdBy: "Created by",
     president: "IAASO - PRESIDENT DSM 2025/2026",
     paymentSchedule: "Payment Schedule:",
@@ -51,7 +52,7 @@ const translations = {
     beforeSem2: "Kabla ya Muhula wa Pili",
     downloadPDF: "Pakua PDF",
     print: "Chapa",
-    otherSystems: "Mfumo wa usimamizi wa wanafunzi wa Taasisi",
+    otherSystems: "Tazama Programu Zingine za Kitaaluma",
     createdBy: "Imeundwa na",
     president: "RAIS WA IAASO - DSM 2025/2026",
     paymentSchedule: "Ratiba ya Malipo:",
@@ -76,6 +77,7 @@ export default function TuitionCalculator() {
   } | null>(null);
   const { toast } = useToast();
   const { theme, setTheme } = useTheme();
+  const navigate = useNavigate();
 
   const t = translations[language];
 
@@ -164,8 +166,8 @@ export default function TuitionCalculator() {
     window.print();
   };
 
-  const navigateToOtherSystem = () => {
-    window.open("https://isms.iaa.ac.tz/isms-dar/web/index.php?r=site%2Flogin", "_blank");
+  const navigateToPrograms = () => {
+    navigate("/programs");
   };
 
   const toggleLanguage = () => {
@@ -350,11 +352,11 @@ export default function TuitionCalculator() {
 
             <div className="mt-6">
               <Button
-                onClick={navigateToOtherSystem}
+                onClick={navigateToPrograms}
                 variant="secondary"
                 className="w-full h-12"
               >
-                <ExternalLink className="mr-2 h-5 w-5" />
+                <BookOpen className="mr-2 h-5 w-5" />
                 {t.otherSystems}
               </Button>
             </div>

@@ -323,14 +323,6 @@ export default function TuitionCalculator() {
                     <Download className="mr-2 h-4 w-4" />
                     {t.downloadPDF}
                   </Button>
-                  <Button
-                    onClick={handlePrint}
-                    variant="outline"
-                    className="flex-1 h-11"
-                  >
-                    <Printer className="mr-2 h-4 w-4" />
-                    {t.print}
-                  </Button>
                 </div>
 
                 <div className="border-t-2 border-primary/30 pt-4 mt-4">

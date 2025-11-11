@@ -15,7 +15,7 @@ const programs = [
   {
     id: 2,
     name: "ISMS Portal",
-    description: "Institute Student Management System for accessing academic records, schedules, and other student services.",
+    description: "Institute Student Management System for accessing academic records, and other student services.",
     duration: "Web Portal",
     link: "https://isms.iaa.ac.tz/isms-dar/web/index.php?r=site%2Flogin"
   }
